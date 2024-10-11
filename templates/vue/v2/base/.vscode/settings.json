@@ -1,0 +1,195 @@
+{
+  "editor.quickSuggestions": {
+    "strings": true
+  },
+  "workbench.iconTheme": "material-icon-theme",
+  "editor.tabSize": 2,
+  "editor.fontLigatures": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll.eslint": "explicit"
+  },
+  "editor.bracketPairColorization.enabled": true,
+  "editor.guides.bracketPairs": "active",
+  "git.enableSmartCommit": true,
+  "path-intellisense.mappings": {
+    "@": "${workspaceFolder}/src",
+    "~@": "${workspaceFolder}/src"
+  },
+  "gutterpreview.paths": {
+    "@": "/src",
+    "~@": "/src"
+  },
+  "terminal.integrated.cursorStyle": "line",
+  "files.associations": {
+    "*.env.*": "dotenv"
+  },
+  "[jsonc]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[javascript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "javascript.updateImportsOnFileMove.enabled": "always",
+  "[javascriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "i18n-ally.displayLanguage": "zh",
+  "[html]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[typescript]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[vue]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "terminal.integrated.tabs.enabled": true,
+  "[typescriptreact]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+  "vue3snippets.enable-compile-vue-file-on-did-save-code": false,
+  "editor.formatOnSave": true,
+  "material-icon-theme.activeIconPack": "angular",
+  "material-icon-theme.files.associations": {},
+  "material-icon-theme.folders.associations": {
+    "enum": "typescript",
+    "enums": "typescript",
+    "store": "context",
+    "stores": "context",
+    "composable": "hook",
+    "composables": "hook",
+    "directive": "tools",
+    "directives": "tools",
+    "business": "core"
+  },
+  // 头部注释
+  "fileheader.customMade": {
+    // 自动提取当前git config中的: 用户名、邮箱
+    // "Author": "git config user.name && git config user.email", // 同时获取用户名与邮箱
+    "Author": "git config user.name", // 仅获取用户名
+    // "Author": "git config user.email", // 仅获取邮箱
+    // "Author": "OBKoro1", // 写死的固定值 不从git config中获取
+    "Date": "Do not edit", // 文件创建时间(不变)
+    // LastEditors、LastEditTime、FilePath将会自动更新 如果觉得时间更新的太频繁可以使用throttleTime(默认为1分钟)配置更改更新时间。
+    "LastEditors": "git config user.name", // 文件最后编辑者 与Author字段一致
+    // 由于编辑文件就会变更最后编辑时间，多人协作中合并的时候会导致merge
+    // 可以将时间颗粒度改为周、或者月，这样冲突就减少很多。搜索变更时间格式: dateFormat
+    "LastEditTime": "Do not edit", // 文件最后编辑时间
+    // 输出相对路径，类似: /文件夹名称/src/index.js
+    // "FilePath": "Do not edit", // 文件在项目中的相对路径 自动更新
+    // 插件会自动将光标移动到Description选项中 方便输入 Description字段可以在specialOptions更改
+    "Description": "" // 介绍文件的作用、文件的入参、出参。
+    // custom_string_obkoro1~custom_string_obkoro100都可以输出自定义信息
+    // 可以设置多条自定义信息 设置个性签名、留下QQ、微信联系方式、输入空行等
+    // "custom_string_obkoro1": "",
+    // 版权声明 保留文件所有权利 自动替换年份 获取git配置的用户名和邮箱
+    // 版权声明获取git配置, 与Author字段一致: ${git_name} ${git_email} ${git_name_email}
+    // "custom_string_obkoro1_copyright": "Copyright (c) ${now_year} by ${git_name_email}, All Rights Reserved. "
+    // "custom_string_obkoro1_copyright": "Copyright (c) ${now_year} by 写死的公司名/用户名, All Rights Reserved. "
+  },
+  // 函数注释
+  "fileheader.cursorMode": {
+    "description": "", // 函数注释生成之后，光标移动到这里
+    "param": "", // param 开启函数参数自动提取 需要将光标放在函数行或者函数上方的空白行
+    "return": ""
+  },
+  //todo-tree 标签配置  标签兼容大小写字母(很好的功能!!!)
+  "todo-tree.regex.regex": "((%|#|//|<!--|^\\s*\\*)\\s*($TAGS)|^\\s*- \\[ \\])",
+  "todo-tree.general.tags": [
+    "todo", //添加自定义的标签成员,将在下面实现它们的样式
+    "bug",
+    "tag",
+    "done",
+    "mark",
+    "test",
+    "update",
+    "review"
+  ],
+  "todo-tree.regex.regexCaseSensitive": false,
+  "todo-tree.highlights.defaultHighlight": {
+    //如果相应变量没赋值就会使用这里的默认值
+    "foreground": "black", //字体颜色
+    "background": "yellow", //背景色
+    "icon": "check", //标签样式 check 是一个对号的样式
+    "rulerColour": "yellow", //边框颜色
+    "type": "tag", //填充色类型  可在TODO TREE 细节页面找到允许的值
+    "iconColour": "yellow" //标签颜色
+  },
+  "todo-tree.filtering.excludeGlobs": ["**/node_modules/*/**", "**/.vscode/**"],
+  "todo-tree.highlights.customHighlight": {
+    //todo 		需要做的功能
+    "todo": {
+      "icon": "alert", //标签样式
+      "background": "#E6A23C", //背景色
+      "rulerColour": "#E6A23C", //外框颜色
+      "iconColour": "#E6A23C" //标签颜色
+    },
+
+    //bug		必须要修复的BUG
+    "bug": {
+      "background": "#d7000f",
+      "icon": "bug",
+      "rulerColour": "#d7000f",
+      "iconColour": "#d7000f"
+    },
+
+    //tag		标签
+    "tag": {
+      "background": "#409EFF",
+      "icon": "tag",
+      "rulerColour": "#409EFF",
+      "iconColour": "#409EFF",
+      "rulerLane": "full"
+    },
+
+    //done		已完成
+    "done": {
+      "background": "#67C23A",
+      "icon": "check",
+      "rulerColour": "#67C23A",
+      "iconColour": "#67C23A"
+    },
+
+    //mark     	标记一下
+    "mark": {
+      "background": "#ff770f",
+      "icon": "note",
+      "rulerColour": "#ff770f",
+      "iconColour": "#ff770f"
+    },
+
+    //test		测试代码
+    "test": {
+      "background": "#df7be6",
+      "icon": "flame",
+      "rulerColour": "#df7be6",
+      "iconColour": "#df7be6"
+    },
+
+    //update  	优化升级点
+    "update": {
+      "background": "#002ea6",
+      "icon": "versions",
+      "rulerColour": "#002ea6",
+      "iconColour": "#002ea6"
+    },
+    // "review": {
+    //   "background": "#91b822",
+    //   "icon": "alert",
+    //   "rulerColour": "#91b822",
+    //   "iconColour": "#91b822"
+    // },
+    "review": {
+      "background": "#ff770f",
+      "icon": "note",
+      "rulerColour": "#ff770f",
+      "iconColour": "#ff770f"
+    }
+  }
+}

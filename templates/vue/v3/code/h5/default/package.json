@@ -1,0 +1,16 @@
+{
+  "description": "基于 Vue3、vant、Pinia 的h5项目模版",
+  "dependencies": {
+    "@nutui/icons-vue": "^0.1.1",
+    "@nutui/nutui": "^4.1.0",
+    "@varlet/ui": "^2.13.0",
+    "quarkd": "^1.0.70",
+    "vant": "^4.6.2"
+  },
+  "devDependencies": {
+    "amfe-flexible": "^2.2.1",
+    "cnjm-postcss-px-to-viewport": "^1.0.0",
+    "consola": "^3.2.3",
+    "eruda": "^3.0.0"
+  }
+}

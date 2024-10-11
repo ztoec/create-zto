@@ -1,0 +1,12 @@
+{
+  "description": "基于 Vue2、Element-ui、Vuex 和 webpack5.x 的后台项目模版",
+  
+  "dependencies": {
+    "element-ui": "2.13.2",
+    "js-cookie": "2.2.0",
+    "normalize.css": "7.0.0",
+    "nprogress": "0.2.0",
+    "path-to-regexp": "2.4.0",
+    "screenfull": "4.2.0"
+  }
+}

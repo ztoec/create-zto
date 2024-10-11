@@ -1,0 +1,29 @@
+{
+  "description": "基于 Vue3、TypeScript、Element Plus、Pinia 和 Vite 等主流技术的后台管理系统模版",
+  "dependencies": {
+    "@element-plus/icons-vue": "2.3.1",
+    "element-plus": "2.4.3",
+    "js-cookie": "3.0.5",
+    "lodash-es": "4.17.21",
+    "normalize.css": "8.0.1",
+    "nprogress": "0.2.0",
+    "path-browserify": "1.0.1",
+    "path-to-regexp": "6.2.1",
+    "screenfull": "6.0.2"
+  },
+  "devDependencies": {
+    "@types/js-cookie": "3.0.6",
+    "@types/lodash-es": "4.17.12",
+    "@types/node": "20.10.4",
+    "@types/nprogress": "0.2.3",
+    "@types/path-browserify": "1.0.2",
+    "@typescript-eslint/eslint-plugin": "6.14.0",
+    "@typescript-eslint/parser": "6.14.0",
+    "@vue/eslint-config-typescript": "12.0.0",
+    "typescript": "5.3.3",
+    "unocss": "0.58.0",
+    "vite-svg-loader": "5.1.0",
+    "vue-eslint-parser": "9.3.2",
+    "vue-tsc": "1.8.25"
+  }
+}

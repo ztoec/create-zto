@@ -1,0 +1,6 @@
+{
+  "description": "基于 Vue2、Element-ui、Vuex 和 webpack4.x 的h5项目模版",
+  "dependencies": {
+   "vant": "^2.12.48"
+  }
+}
