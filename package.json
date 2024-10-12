@@ -22,7 +22,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/monkeyozZ/create-zto.git"
+    "url": "git+https://github.com/ztoec/create-zto.git"
   },
   "keywords": [
     "create-zto"
@@ -30,9 +30,9 @@
   "author": "monkeyozZ",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/monkeyozZ/create-zto/issues"
+    "url": "https://github.com/ztoec/create-zto/issues"
   },
-  "homepage": "https://github.com/monkeyozZ/create-zto#readme",
+  "homepage": "https://github.com/ztoec/create-zto#readme",
   "devDependencies": {
     "@commitlint/cli": "^19.3.0",
     "@commitlint/config-conventional": "^19.2.2",
