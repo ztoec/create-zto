@@ -2,6 +2,7 @@
 node_modules
 /dist
 /docs
+playground/*
 entry.cjs
 # local env files
 .env.local
