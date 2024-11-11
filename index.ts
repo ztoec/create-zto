@@ -9,7 +9,6 @@ import { parseArgs } from 'node:util'
 import prompts from 'prompts'
 import { red, green, bold } from 'kolorist'
 import { postOrderDirectoryTraverse } from './utils/directoryTraverse'
-import msgData from './messages'
 import renderTemplate from './utils/renderTemplate'
 import getCommand from './utils/getCommand'
 
