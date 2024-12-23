@@ -1,0 +1,16 @@
+{
+  "git": {
+    "requireCleanWorkingDir": true,
+    "commit": true,
+    "commitMessage": "chore: release v${version}",
+    "tag": true,
+    "tagName": "v${version}",
+    "push": true
+  },
+  "npm": {
+    "publish": true
+  },
+  "hooks": {
+    "before:release": "zx ./scripts/build.mjs"
+  }
+}

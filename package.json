@@ -16,9 +16,8 @@
   "scripts": {
     "prepare": "husky",
     "build": "zx ./scripts/build.mjs",
-    "publish:patch": "zx ./scripts/publish.mjs patch",
-    "publish:minor": "zx ./scripts/publish.mjs minor",
-    "publish:major": "zx ./scripts/publish.mjs major"
+    "release": "release-it",
+    "commit": "czg"
   },
   "repository": {
     "type": "git",
@@ -34,20 +33,38 @@
   },
   "homepage": "https://github.com/ztoec/create-zto#readme",
   "devDependencies": {
-    "@commitlint/cli": "^19.3.0",
-    "@commitlint/config-conventional": "^19.2.2",
+    "esbuild": "^0.23.0",
     "@tsconfig/node20": "^20.1.4",
     "@types/node": "^22.0.0",
     "@types/prompts": "^2.4.9",
-    "commitizen": "^4.3.0",
-    "husky": "^9.1.4",
     "kolorist": "^1.8.0",
-    "lint-staged": "^15.2.7",
-    "prettier": "^3.3.3",
     "prompts": "^2.4.2",
-    "zx": "^8.1.4"
+    "zx": "^8.1.4",
+    "release-it": "^15.0.0",
+    "eslint": "^8.57.0",
+    "@typescript-eslint/parser": "^6.10.0",
+    "@typescript-eslint/eslint-plugin": "^6.10.0",
+    "eslint-plugin-prettier": "^5.2.1",
+    "eslint-config-prettier": "^9.0.0",
+    "prettier": "^3.3.3",
+    "husky": "^9.1.7",
+    "lint-staged": "^15.2.11",
+    "cz-git": "^1.11.0",
+    "czg": "^1.11.0",
+    "@commitlint/cli": "^17.0.0",
+    "@commitlint/config-conventional": "^17.0.0"
   },
-  "dependencies": {
-    "esbuild": "^0.23.0"
+  "dependencies": {},
+  "lint-staged": {
+    "*.{js,ts,vue,json}": [
+      "prettier --write"
+    ],
+    "!templates/**/*": []
+  },
+  "config": {
+    "commitizen": {
+      "path": "node_modules/cz-git",
+      "config": "./cz.config.js"
+    }
   }
 }

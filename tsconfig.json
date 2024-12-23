@@ -1,7 +1,7 @@
 {
   "extends": "@tsconfig/node20/tsconfig.json",
   "include": ["index.ts", "utils/**/*"],
-  "exclude": ["node_modules", "templates"],
+  "exclude": ["node_modules", "templates/**/*"],
   "compilerOptions": {
     "strict": false,
     "resolveJsonModule": true,
