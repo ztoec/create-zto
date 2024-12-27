@@ -133,7 +133,7 @@ async function init() {
           warn: '当前仅支持vue项目，敬请期待...',
           message: '请选择技术栈的类型',
           initial: 0,
-          choices: (prev, answers) => [
+          choices: () => [
             {
               title: 'vue',
               description: '一个渐进式JavaScript 框架',
@@ -160,7 +160,7 @@ async function init() {
           hint: '- 使用箭头切换按Enter确认。',
           message: '请选择vue版本',
           initial: 0,
-          choices: (prev, answers) => [
+          choices: () => [
             {
               title: 'vue2',
               description: '使用vue2.x版本',
@@ -250,7 +250,7 @@ async function init() {
     __dirname,
     `templates/${frameworkType}/${vueVersion}`,
   )
-  const callbacks: any[] = []
+  const callbacks: ((arg: object) => void)[] = []
 
   function render(templateName) {
     const templateDir = path.resolve(templateRoot, templateName)
