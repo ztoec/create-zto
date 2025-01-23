@@ -143,7 +143,6 @@ async function init() {
               title: 'uni-app',
               description: '一个基于Vue.js的跨端开发框架',
               value: 'uni',
-              disabled: true,
             },
             {
               title: 'react',
@@ -156,7 +155,7 @@ async function init() {
         {
           name: 'vueVersion',
           type: (prev, values) =>
-            ['vue', 'uni'].includes(values.frameworkType) ? 'select' : null,
+            ['vue'].includes(values.frameworkType) ? 'select' : null,
           hint: '- 使用箭头切换按Enter确认。',
           message: '请选择vue版本',
           initial: 0,
@@ -176,7 +175,9 @@ async function init() {
         {
           name: 'needsTypeScript',
           type: (prev, values) =>
-            values.vueVersion === 'v2' ? null : 'toggle',
+            values.vueVersion === 'v2' || values.frameworkType === 'uni'
+              ? null
+              : 'toggle',
           message: '是否使用TypeScript？',
           initial: false,
           active: '是',
@@ -248,7 +249,9 @@ async function init() {
 
   const templateRoot = path.resolve(
     __dirname,
-    `templates/${frameworkType}/${vueVersion}`,
+    frameworkType === 'vue'
+      ? `templates/${frameworkType}/${vueVersion}`
+      : `templates/${frameworkType}`,
   )
   const callbacks: ((arg: object) => void)[] = []
 
@@ -257,16 +260,20 @@ async function init() {
     renderTemplate(templateDir, root, callbacks)
   }
 
-  // 基础模板
-  render(`base`)
+  if (frameworkType === 'vue') {
+    // 基础模板
+    render(`base`)
 
-  // common
-  if (vueVersion === 'v3') {
-    render(`code/${sceneType}/common`)
+    // common
+    if (vueVersion === 'v3') {
+      render(`code/${sceneType}/common`)
+    }
+
+    // 是否使用typeScript
+    render(`code/${sceneType}/${needsTypeScript ? 'typescript' : 'default'}`)
+  } else if (frameworkType === 'uni') {
+    render('')
   }
-
-  // 是否使用typeScript
-  render(`code/${sceneType}/${needsTypeScript ? 'typescript' : 'default'}`)
 
   const dataStore = {}
   for (const cb of callbacks) {

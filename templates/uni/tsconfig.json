@@ -1,0 +1,48 @@
+{
+  "extends": "@vue/tsconfig/tsconfig.json",
+  "compilerOptions": {
+    "outDir": "./dist",
+    "verbatimModuleSyntax": true,
+    "ignoreDeprecations": "5.0",
+    "jsx": "preserve",
+    "lib": ["DOM", "ESNext"],
+    "baseUrl": ".",
+    "paths": {
+      "@/*": ["./src/*"]
+    },
+    "resolveJsonModule": true,
+    "types": [
+      "@dcloudio/types",
+      "@dcloudio/uni-app",
+      "@uni-helper/uni-app-types",
+      "miniprogram-api-typings",
+      "@types/node"
+    ],
+    "allowJs": true,
+    "strict": true,
+    "strictNullChecks": true,
+    "noUnusedLocals": true,
+    "sourceMap": true,
+    "esModuleInterop": true,
+    "forceConsistentCasingInFileNames": true,
+    "skipLibCheck": true
+  },
+  "vueCompilerOptions": {
+    "plugins": ["@uni-helper/uni-app-types/volar-plugin"]
+  },
+  "include": [
+    "src/**/*.ts",
+    "src/**/*.d.ts",
+    "src/**/*.tsx",
+    "src/**/*.vue",
+    "types/**/*.d.ts",
+    "types/**/*.ts"
+  ],
+  "exclude": [
+    "dist",
+    "node_modules",
+    "uni_modules",
+    "src/utils/sm-crypto",
+    "src/utils/sm-crypto/**/*"
+  ]
+}

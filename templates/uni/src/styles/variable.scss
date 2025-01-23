@@ -1,0 +1,16 @@
+@use 'sass:color';
+
+// 基础变量定义
+// 主色
+$primary-color: #3b82f6;
+// 字体
+$font-size-base: 14px;
+$font-size-small: 12px;
+$font-size-large: 16px;
+
+// CSS 变量
+:root {
+  --fx-primary-color: #{$primary-color};
+  --fx-primary-hover-color: #{color.adjust($primary-color, $lightness: -10%)};
+  --fx-primary-active-color: #{color.adjust($primary-color, $lightness: -15%)};
+}

@@ -55,12 +55,6 @@
     "@commitlint/config-conventional": "^17.0.0"
   },
   "dependencies": {},
-  "lint-staged": {
-    "*.{js,ts,vue,json}": [
-      "prettier --write"
-    ],
-    "!templates/**/*": []
-  },
   "config": {
     "commitizen": {
       "path": "node_modules/cz-git",

@@ -1,0 +1,7 @@
+// 重置内置组件默认样式
+@use './variable.scss' as *;
+
+button {
+  font-size: $font-size-base;
+  line-height: 1.5;
+}
