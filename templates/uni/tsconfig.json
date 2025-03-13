@@ -5,6 +5,7 @@
     "verbatimModuleSyntax": true,
     "ignoreDeprecations": "5.0",
     "jsx": "preserve",
+    "jsxImportSource": "vue",
     "lib": ["DOM", "ESNext"],
     "baseUrl": ".",
     "paths": {

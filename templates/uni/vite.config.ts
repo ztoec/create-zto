@@ -30,6 +30,7 @@ export default defineConfig(() => {
         imports: ['vue', 'uni-app', 'pinia'],
         dts: 'types/auto-imports.d.ts',
         vueTemplate: true,
+        dirs: ['src/composables'],
       }),
     ],
     css: {
