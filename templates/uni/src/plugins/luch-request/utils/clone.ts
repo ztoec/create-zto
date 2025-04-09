@@ -119,7 +119,7 @@ const clone = (function () {
       } else if (useBuffer && Buffer.isBuffer(parent)) {
         if (Buffer.from) {
           // Node.js >= 5.10.0
-          child = Buffer.from(parent)
+          child = Buffer.from(parent as unknown as ArrayBuffer)
         } else {
           // Older Node.js versions
           child = new Buffer(parent.length)

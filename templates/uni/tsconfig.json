@@ -1,13 +1,13 @@
 {
-  "extends": "@vue/tsconfig/tsconfig.json",
   "compilerOptions": {
-    "outDir": "./dist",
-    "verbatimModuleSyntax": true,
-    "ignoreDeprecations": "5.0",
+    "target": "ESNext",
     "jsx": "preserve",
     "jsxImportSource": "vue",
-    "lib": ["DOM", "ESNext"],
+    "lib": ["DOM", "DOM.Iterable", "ESNext"],
+    "useDefineForClassFields": true,
     "baseUrl": ".",
+    "module": "ESNext",
+    "moduleResolution": "Bundler",
     "paths": {
       "@/*": ["./src/*"]
     },
@@ -23,9 +23,12 @@
     "strict": true,
     "strictNullChecks": true,
     "noUnusedLocals": true,
+    "outDir": "./dist",
     "sourceMap": true,
     "esModuleInterop": true,
     "forceConsistentCasingInFileNames": true,
+    "verbatimModuleSyntax": true,
+    "ignoreDeprecations": "5.0",
     "skipLibCheck": true
   },
   "vueCompilerOptions": {
@@ -36,8 +39,7 @@
     "src/**/*.d.ts",
     "src/**/*.tsx",
     "src/**/*.vue",
-    "types/**/*.d.ts",
-    "types/**/*.ts"
+    "types/**/*.d.ts"
   ],
   "exclude": [
     "dist",
